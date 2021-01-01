@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     function toggleSlide(item) {
-        $('item').each(function (i) {
+        $(item).each(function (i) {
             $(this).on('click', function (e) {
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
