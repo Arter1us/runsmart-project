@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -59,20 +60,21 @@
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item">
-                    <img src="icons/advantages/cup.png" alt="cup" class="advantages__img">
+                    <img src="icons/advantages/cup.png" alt="cup" class="advantages__icon">
                     <div class="advantages__subtitle">Делимся опытом</div>
                     <div class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом,
                         так как сами бегают полумарафоны, переплыли Босфор,
                         готовятся к соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages/heart.png" alt="heart" class="advantages__img">
+                    <img src="icons/advantages/heart.png" alt="heart"
+                        class="advantages__icon advantages__icon_animated">
                     <div class="advantages__subtitle">Заботимся о здоровье</div>
                     <div class="advantages__descr">Мы работаем для того, чтобы Ваши занятия спортом
                         шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages/shoe.png" alt="shoe" class="advantages__img">
+                    <img src="icons/advantages/shoe.png" alt="shoe" class="advantages__icon">
                     <div class="advantages__subtitle">Учимся бегать</div>
                     <div class="advantages__descr">Помогаем с обучением правильной технике бега!
                         Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING.</a></div>
@@ -96,7 +98,7 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/slide_1.jpg" alt="slide"></div>
@@ -104,7 +106,7 @@
                 <div><img src="img/slide_3.jpg" alt="slide"></div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -367,7 +369,8 @@
         <div class="container">
             <h2 class="title">Отзывы клиентов</h2>
 
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp" data-wow-duration="0.7s"
+                data-wow-delay="0.7s">
                 <img src="img/person_1.png" alt="person" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -380,12 +383,13 @@
                 </div>
             </div>
             <hr>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp" data-wow-duration="0.7s"
+                data-wow-delay="0.7s">
                 <img src="img/person_2.png" alt="person" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин</div>
                     <div class="feed__count">1 полумарафон</div>
-                    <div class="feed__descr">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже
+                    <div class="feed__descr">Крутая штука - пульсометр. Обычно без них бегал. Оказывается только хуже
                         себе делал. Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую
                         тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план
                         тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!
@@ -393,7 +397,8 @@
                 </div>
             </div>
             <hr>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp" data-wow-duration="0.7s"
+                data-wow-delay="0.7s">
                 <img src="img/person_3.png" alt="person" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина</div>
@@ -417,7 +422,7 @@
             width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
             tabindex="0"></iframe>
         <div class="footer__info">
-            <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
+            <address class="footer__addr">Москва, Мясницкий проезд, д. 3с1</address>
             <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
             <div class="footer__social">
                 <a href="#" class="footer__social-item"><img src="icons/facebook.svg" alt="facebook"></a>
@@ -459,14 +464,18 @@
             <div class="modal__subtitle">Спасибо за вашу заявку!</div>
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
-
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
